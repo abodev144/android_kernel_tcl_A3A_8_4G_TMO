@@ -51,7 +51,14 @@ dws_path    :    dws file path
 file_path   :    where you want to put generated files
 log_path    :    where to store the log files
 paras        :    parameter for generate wanted file
-'''
+print('''
+usage: DrvGen [dws_path] [file_path] [log_path] [paras]...
+options and arguments:
+dws_path    :    dws file path
+file_path   :    where you want to put generated files
+log_path    :    where to store the log files
+paras        :    parameter for generate wanted file
+''')
 
 def is_oldDws(path, gen_spec):
     if not os.path.exists(path):
