@@ -15,7 +15,7 @@ jobs:
       CCACHE_NOHASHDIR: "true"
       CCACHE_MAXSIZE: "2G"
       CCACHE_HARDLINK: "true"
-      KERNEL_DEFCONFIG: "a3a84g_debug_defconfig"
+      KERNEL_DEFCONFIG: "tb8765ap1_bsp_debug_defconfig"
       
     steps:
     - name: Checkout
@@ -45,7 +45,7 @@ jobs:
         export ARCH=arm
         export SUBARCH=arm
         export TARGET=out
-        make O=$TARGET ARCH=$ARCH CROSS_COMPILE=$CROSS_COMPILE a3a84g_debug_defconfig | tee -a Defconfig.log
+        make O=$TARGET ARCH=$ARCH CROSS_COMPILE=$CROSS_COMPILE tb8765ap1_bsp_debug_defconfig | tee -a Defconfig.log
         make O=$TARGET ARCH=$ARCH CROSS_COMPILE=$CROSS_COMPILE -j8 | tee -a Kernel.log
 
     - name: Upload zImage-dtb
