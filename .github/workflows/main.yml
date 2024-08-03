@@ -37,10 +37,10 @@ jobs:
     - name: Build Kernel
       run: |
         if [[ ! -d gcc ]]; then
-          git clone https://github.com/ruben1863/android_gcc_6.4.1_arm-eabi gcc
+          git clone https://github.com/Skyrimus/arm-linux-gnueabihf-linaro-6.3.1-mt6580 gcc
         fi
         mkdir -p out
-        export CROSS_COMPILE=${PWD}/gcc/bin/arm-eabi-
+        export CROSS_COMPILE=${PWD}/gcc/bin/arm-linux-gnueabihf-
         export USE_CCACHE=1
         export ARCH=arm
         export SUBARCH=arm
